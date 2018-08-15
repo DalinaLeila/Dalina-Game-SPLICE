@@ -15,4 +15,4 @@ function Sound(src) {
 }
 
 mySound = new Sound("music/backgroundMusic.mp3"); 
-swipeSound = new Sound("music/swipe.mp3")
+swipeSound = new Sound("music/swipe.mp3");
