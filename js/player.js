@@ -4,7 +4,7 @@ function Player(x,y,width,height) {
   this.width = width;
   this.height = height;
   this.player1 = new Image();
-  this.player1.src = "./images/player1.png";
+  this.player1.src = "images/player1.png";
 
   this.update = function(){
     ctx.drawImage(this.player1,this.x,this.y,this.width,this.height);
