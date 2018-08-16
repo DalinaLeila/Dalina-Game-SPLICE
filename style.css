@@ -5,7 +5,13 @@ canvas{
   background-size: cover;
   margin-top:20px;
 }
-
+.highscores{
+  background-color: black;
+  color: yellow;
+  width:20%;
+  padding-top:2%;
+  padding-left:2%;
+}
 h1 {
   display: inline;
 	position: relative;

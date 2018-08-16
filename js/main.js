@@ -136,14 +136,24 @@ document.onkeydown = function(e) {
 function gameReload(){
   isGameStarted = false;
   lost  = true;
-
   button.innerHTML = "TRY AGAIN?"
   button.style.backgroundColor = "#F2410C";
   button.style.color = "black";
+  
   document.getElementById("score").innerHTML = "Your Score is: " +  score;
   document.getElementById("score").style.color = "red";
   document.getElementById("score").style.fontSize = "40px";
 
+
+  if (localStorage.getItem('bestScore') === undefined || localStorage.getItem('bestScore') < this.score) {
+    localStorage.setItem('bestScore', this.score) 
+  }
+
+  if (localStorage.getItem('bestScore')) {
+    document.getElementById("highscores").innerHTML = "Highscore: " + localStorage.getItem('bestScore');
+    document.getElementById("highscores").style.color = "yellow";
+    document.getElementById("highscores").style.fontSize = "25px";
+  }
 
   button.onclick = function() {
     window.location.reload();
